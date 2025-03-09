@@ -1,0 +1,55 @@
+
+{ "Name1": "Utbildning",
+
+"educationList": [
+    {
+        "title": "YH Borås, Frontendutvecklare React",
+        "period": "2024 - nu"
+    },
+
+    {
+        "title": "Komvux, Programmering 1 (C#)",
+        "period": "2022"
+    },
+
+    {
+        "title": "Komvux, Datorteknik 1A",
+        "period": "2021"
+    },
+
+    {
+        "title": "Umeå Universitet, Kandidatexamen i Socialpsykologi",
+        "period": "2003 - 2009"
+    },
+
+    {
+        "title": "Gymnasial utbildning, Naturvetenskapliga programmet",
+        "period": "1998 - 2001"
+    }
+],
+
+"Name2": "Anställningar",
+
+"workList":[
+    {
+        "title": "Lidingö stad, boendestödjare",
+        "period": "2015 - nu"
+    },
+
+    {
+        "title": "Olivia hemtjänst, boendestödjare",
+        "period": "2014 - 2015"
+    },
+
+    {
+        "title": "Skellefteå kommun, boendestödjare",
+        "period": "2010 - 2014"
+    },
+
+    {
+        "title": "Lorem, ipsum dolor sit amet.",
+        "period": "Lorem ipsu"
+    }
+]
+}
+

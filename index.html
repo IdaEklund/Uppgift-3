@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!--länk till font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--länkar till fontsen-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!--Nyckelord/sökord nedan-->
+    <meta name=”keywords” content= "frontend, frontendstudent, YH, webbutveckling, portfolio"/>
+
+    <!--Beskrivning av webbsidan.-->
+    <meta name="Description" content="Portfolio av en frontendstudent på Yrkeshögskolan i Borås." />
+
+    <title>Idas hemsida</title>
+
+</head>
+
+
+<body>
+
+    <!--Headern är nedan. Navigeringsfältet ligger i den. Sidan man 
+    befinner sig på är "aktiv" och den "knappen" har en svart ram
+    runt sig.-->
+    <header>
+
+        <nav>
+            <div class="nav-content active">
+                <a href="./index.html">Hem</a>
+            </div>
+            <div class="nav-content">
+                <a href="./about.html">Om mig</a>
+            </div>
+            <div class="nav-content">
+                <a href="./contact.html"> Kontakt</a>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!--Profilbilden och presentationstexten ligger i varsin "box".-->
+        <div class="presentation">
+
+            <div class="boxes">
+                <!--Jag har komprimerat bilden. -->
+                <img src="./Img/jag.jpg" alt="Profilbild">
+            </div>
+
+            <div class="boxes">
+                <p>Hej och välkommen hit! Jag heter Ida och
+                    studerar frontendutveckling
+                    på Borås Yrkeshögskola. Kolla gärna in projekt
+                    som jag har gjort, lite längre ner på den här sidan.
+                    <a href="./about.html">Här</a> kan ni även kolla in mitt CV!
+                </p>
+            </div>
+
+        </div>
+
+
+        <!--Projekten ligger i varsin "box". Det är bara det första projektet som har en
+        fungerande länk eftersom jag inte hade några fler projekt att lägga till.-->
+        <div class="projects">
+
+            <div class="project">
+                <img src="./Img/1login.jpg" alt="Log-in-sida">
+                <div class="content">
+                    <p><a href="https://github.com/IdaEklund/Uppgift_1.git">Login-sida</a></p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="./Img/2programmering.jpg" alt="Projekt 2">
+                <div class="content">
+                    <p><a href=" ">Projekt 2</a></p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="./Img/3keyboard.jpg" alt="Projekt 3">
+                <div class="content">
+                    <p><a href=" ">Projekt 3</a></p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="./Img/4music.jpg" alt="Projekt 4">
+                <div class="content">
+                    <p><a href=" ">Projekt 4</a></p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!--Nedan är sidfoten med symboler från "font awesome" med länkar till
+    LinkedIn o.s.v. "Head", "header" och "footer" ligger på alla sidorna.-->
+    <footer>
+
+        <a href="https://linkedin.com/in/ida-eklund-142a8ba8"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        <a href="mailto:82idaekl@skola.boras.se"><i class="fa-solid fa-square-envelope fa-2x"></i></a>
+        <a href="https://github.com/IdaEklund"><i class="fa-brands fa-github fa-2x"></i></a>
+
+    </footer>
+
+<script src="./script.js"></script>
+</body>
+
+
+</html>

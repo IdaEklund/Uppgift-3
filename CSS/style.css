@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*"Fontsen" som jag använder mig av*/
+body {
+    font-family: 'Orbitron', 'Rajdhani', sans-serif;
+}
+
+
+/*----Headern är nedan--------------------------------
+
+Jag använde mig av "flex" för att göra headern responsiv.*/
+header {
+    display: flex;
+    height: 20vh;
+}
+
+/*Jag skapade 3 "fält" som ska föreställa navigerings-
+knappar. Varje knapp länkar till en av dom 3 olika sidorna.
+Jag la knapparna på en horisontell rad och la dom centrerat 
+i headern.*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3%;
+    height: 100%;
+    width: 100%
+}
+
+/*Fälten fick lite rundade hörn och en skuggning.
+Texten/länkarna centrerades i fälten.
+Fälten fick en min-height och min-width så att det skulle
+se bra ut när man förminskar webbfönstret.*/
+.nav-content {
+    display: flex;
+    border-radius: 0.5rem;
+    color: #111827;
+    padding: 3%;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    min-height: 67px;
+    width: 45vh;
+    min-width: 140px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+/*Länkarna stajlades.*/
+.nav-content a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: 'Orbitron';
+    font-weight: 100;
+    white-space: nowrap;
+}
+
+/*En tjockare svart ram dyker upp om man
+"hovrar" över fälten.*/
+.nav-content:hover {
+    border: 0.2rem solid black;
+}
+
+/*Den aktiva sidans "menyknapp" har en tjockare svart
+ram runt sig så att besökaren vet vilken sida hen är på.*/
+.nav-content.active {
+    border: 0.2rem solid black;
+    font-size: 1.8rem;
+    font-family: 'Orbitron';
+    font-weight: 100;
+
+}
+
+/*Länkarna är svarta när man "hovrar" över dom.*/
+.nav-content a:hover {
+    color: black;
+}
+
+
+/*--------------Bodyn är nedan---------------*/
+
+/*Jag använder 'Orbitron' i headern och 'Rajdhani'
+i "main."*/
+main {
+    font-family: 'Rajdhani';
+    width: 100%;
+    height: 100%;
+}
+
+/*Dom två första fyrkanterna delar på en "div".
+Jag använde mig av en grid-layout.*/
+.presentation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3%;
+    margin: 2vh 2vh 2vh 2vh;
+    gap: 2%;
+}
+
+/*Fyrkanterna fick en skuggning. Deras innehåll centrerades.*/
+.boxes {
+    display: grid;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 15vh;
+    margin: 0%;
+    max-width: 100%;
+    max-height: 90vh;
+    align-items: center;
+    text-align: justify;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/*Bilden fyller upp hela innehållet.*/
+.boxes img {
+    width: 100%;
+    min-width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Texten och länken stajlades.*/
+.boxes p {
+    min-width: 150px;
+    object-fit: cover;
+}
+
+.boxes a {
+    color: black;
+    text-decoration: underline;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/*Även dom nedre 4 fyrkanterna fick en grid-layout.*/
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3%;
+    margin: 0vh 2vh 3vh 2vh;
+    gap: 2%;
+}
+
+/*Fyrkanterna fick en skuggning.*/
+.project {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    position: relative;
+    padding: 5vh;
+    margin: 0%;
+    width: 100%;
+    max-height: 70vh;
+    overflow: hidden;
+}
+
+/*Egenskaperna för innehållet i varje fyrkant.*/
+.project .content {
+    position: absolute;
+    opacity: 0; /*Utgångsläget för innehållet är att det inte ska ha ett filter över sig. D.v.s. det ska vara transparent.*/
+    inset: 5vh 5vh 5vh 5vh; /*Mått för att filtret ska täcka hela bilden.*/
+    color: white;
+    width: auto;
+    padding: 10%;
+    display: flex; /*Jag la till display:flex och align-items plus justify-content för att centrera länken på bilden.*/
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease; /*Jag la till en övergångseffekt för att göra övergången "mjukare".*/
+}
+
+/*Länken stajlades.*/
+a {
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+/*Länken byter färg när den "hovras".*/
+a:hover {
+    color: lightgray;
+}
+
+/*Länken blir mörkgrå när den trycks ner.*/
+a:active {
+    color: darkgray;
+}
+
+/*Bilderna fyller ut hela utrymmet som dom ligger i.*/
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*--------------About-sidan är nedan------------*/
+
+/*CV-et fick en flex-layout.*/
+.CV {
+    display: flex;
+    padding: 5%;
+    height: auto;
+    min-height: 556px;
+    width: 60%;
+    min-width: 410px;
+    margin: 8vh auto 8vh auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    column-gap: 5px;
+    gap: 2%;
+    font-size: 1.1rem;
+}
+
+/*Rubrikerna fick lite margin.*/
+#header1{
+    margin: 0 0 2% 0;
+}
+#header2{
+    margin: 4% 0 2% 0;
+}
+
+
+/*----------Contact-sidan är nedan--------------*/
+
+/*Sidans innehåll fick en flex-layout.*/
+.box1 {
+    display: flex;
+    width: 30%;
+    min-width: 200px;
+    height: 60vh;
+    margin: 4% auto 2% auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 2%;
+
+}
+
+.box1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*Kontaktuppgifterna las lodrätt i en lista.*/
+.box2 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 20%;
+    min-width: 150px;
+    height: 20%;
+    margin: 1% auto 5% auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 2%;
+}
+
+/*Rubriken och listan fick lite padding.*/
+.box2 h3 {
+    padding: 0 0 7% 0;
+}
+
+/*Punkterna framför listan togs bort.*/
+.box2 li {
+    padding: 0 0 2% 0;
+    font-weight: 500;
+    list-style-type: none;
+}
+
+
+
+/*-------Footern är nedan--------------*/
+
+/*Footern fick en flex-layout.
+Innehållet centrerades.*/
+footer {
+    display: flex;
+    background-color: #667799;
+    padding: 10vh;
+    justify-content: center;
+    gap: 2%;
+}
+
+/*Symbolerna med länkar till andra sidor
+och mail-symbolen fick en färg.*/
+.fa-brands {
+    color: rgb(37, 36, 36);
+}
+
+.fa-solid {
+    color: rgb(37, 36, 36);
+}
+
+
+/*------Responsiv design är nedan---------*/
+
+/*När sidstorleken minskas så hamnar dom 2
+första fyrkanterna på index-sidan lodrätt.
+Dom 4 nedersta hamnar 3-i-rad och en
+på raden under. CV:et tar upp hela sidans bredd
+istället för att hålla sig i mitten.*/
+@media(max-width: 768px) {
+    .presentation {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .CV {
+        width: 100%;
+        margin: 5% 0% 5% 0%;
+    }
+}
+
+
+/*Om sidstorleken minskas ännu mer (mobilstorlek) så
+händer samma sak som ovan, plus att dom 4 nedersta 
+fyrkanterna på indexsidan hamnar 2 gånger 2-i-rad.
+Nav-fältens mellanrum minskar och fälten får en minimum-
+bredd, så att texten ska rymmas inuti dom/så att det
+ska se bra ut.*/
+@media(max-width: 480px) {
+    .presentation {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav {
+        gap: 1%;
+    }
+
+    .nav-content {
+        min-width: 145px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .CV {
+        width: 100%;
+        margin: 5% 0% 5% 0%;
+    }
+}
